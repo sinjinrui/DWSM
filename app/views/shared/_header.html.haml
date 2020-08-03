@@ -1,0 +1,12 @@
+.Wrapper
+  .Header-left
+    = link_to "Daily Work Schedule Maker", root_path, class: "menu-link"
+  .Header-right
+    -if store_signed_in?
+      = link_to current_store.name, "#", class: "store-name"
+    = link_to "DWS作成", "#", class: "menu-link"
+    = link_to "スタッフ登録", new_staff_path, class: "menu-link"
+    -if store_signed_in?
+      = link_to "ログアウト", destroy_store_session_path, method: :delete, class: "menu-link"
+    -else
+      = link_to "ログイン", new_store_session_path, class: "menu-link"

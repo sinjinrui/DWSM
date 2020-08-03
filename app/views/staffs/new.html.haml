@@ -1,0 +1,23 @@
+= render 'shared/header'
+
+.Staff
+  .Staff-management
+    %h1.Staff-management__title スタッフ一覧
+    .Staffs
+      .Staffs-index
+        %p.Staffs-index__title 名前
+        - @staffs.each do |staff|
+          %p= staff.name
+      .Staffs-index
+        %p.Staffs-index__title キャリアパスランク
+        - @staffs.each do |staff|   
+          %p= staff.rank.name
+  .Staff-regist
+    %h1.Staff-regist__title スタッフ登録
+    = form_with model: @staff, local: true do |f|
+      %p.Staff-regist__text スタッフの名前 (必須)
+      = f.text_area :name, class:"Staff-regist__name", placeholder:"DWSに表示される名称です", maxlength:"10"
+      %p.Staff-regist__text スタッフのキャリアパスランク (必須)
+      = f.collection_select(:rank_id, Rank.all, :id, :name, {},{class:"Staff-regist__rank"})
+      %br
+      = f.submit "登録する", class:"Staff-regist__btn"

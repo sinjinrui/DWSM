@@ -1,0 +1,23 @@
+= render 'shared/header'
+
+.container
+  .Register
+    = form_with model: @store, url: store_registration_path, class: 'Register-form', local: true do |f|
+      %h1.Register-form__text 店舗登録
+      .Register-form__field
+        %p.Register-form__field--text 店舗名 (必須)
+        = f.text_area :name, class: 'Register-form__field--name', placeholder:"店舗名", autofocus: true
+      .Register-form__field
+        %p.Register-form__field--text メールアドレス (必須)
+        = f.email_field :email, class: 'Register-form__field--email', placeholder:"メールアドレス", maxlength:"40"
+      .Register-form__field
+        %p.Register-form__field--text パスワード (必須)
+        = f.password_field :password, class: 'Register-form__field--password', placeholder:"英字、数字両方を含めて6文字以上で入力"
+      .Register-form__field
+        %p.Register-form__field--text 確認用パスワード (必須)
+        = f.password_field :password_confirmation, class: 'Register-form__field--password', placeholder:"同じパスワードを入力"
+      .Register-form__field
+        %p.Register-form__field--text
+        = f.submit "登録する" ,class:"Register-btn"
+
+  %p.copy ©️ 2020 Kawaguchi,inc.

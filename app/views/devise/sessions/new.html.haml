@@ -1,0 +1,17 @@
+= render 'shared/header'
+
+.container
+  .Login
+    = form_with model: @store, url: store_session_path,class: 'Login-form', local: true do |f|
+      %h1.Login-form__text 店舗情報入力
+      .Login-form__field
+        = f.email_field :email, class: 'Login-form__field--email', placeholder:"メールアドレス", autofocus: true
+      .Login-form__field
+        = f.password_field :password, class: 'Login-form__field--password', placeholder:"パスワード"
+      .Login-form__field
+        = f.submit "ログイン" ,class:"Login-btn"
+    .Sign-up
+      %p.Sign-up__text 店舗登録はこちら
+      = link_to "店舗登録", new_store_registration_path, class: "Sign-up__btn"
+
+  %p.copy ©️ 2020 Kawaguchi,inc.

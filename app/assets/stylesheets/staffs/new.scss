@@ -1,0 +1,53 @@
+.Staff {
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 0 0 0;
+  display: flex;
+  &-management {
+    padding: 20px 30px 0 30px;
+    width: 350px;
+    border-right: 2px solid #b6a9a971;
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    }
+  &-regist{
+    padding: 20px 0 0 50px;
+    width: calc(100% - 350px);
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;;
+    }
+    &__name {
+      padding: 5px;
+      resize: none;
+      width: 200px;
+      height: 26px;
+      margin-bottom: 15px;
+    }
+    &__rank {
+      width: 210px;
+      height: 36px;
+      margin-bottom: 30px;
+    }
+    &__btn {
+      padding: 5px 15px;
+      background-color: rgb(160, 8, 8);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+  }
+}
+
+.Staffs {
+  display: flex;
+  justify-content: space-between;
+  &-index {
+    &__title {
+      font-weight: bold;    }
+  }
+}
