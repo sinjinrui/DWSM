@@ -1,0 +1,60 @@
+.Schedule-wrapper
+  .Schedule
+    .Schedule__theme
+      .Schedule__theme--date
+        %P.Date= @time.strftime("%Y/%m/%d(#{@wd[@time.wday]})")
+        .Creater
+          %p.Creater__text 作成者
+          %input.Creater__name
+      .Schedule__theme--text
+        %p.Action-text アクションテーマ
+        %input.Action-input
+    .Schedule__target
+      .Schedule__target--buy
+        %p.Target-text 買取目標
+        %input.Target-number
+        %p.Target-text 件
+        %input.Target-price
+        %p.Target-text 円
+      .Schedule__target--sales
+        %P.Target-text 売上目標
+        %input.Target-number
+        %p.Target-text 件
+        %input.Target-price
+        %p.Target-text 円
+    .Create-wrapper
+      .Btn-list
+        .DWS-parts
+          .DWS-parts__text
+            %p ドラッグでDWSへ移動
+            %p ダブルクリックで削除
+            %p 右端から伸縮可能
+        .Schedule-btn
+          %button.Button{id: 'product'} 生産
+          %button.Button{id: 'buy'} 買取
+          %button.Button{id: 'register'} レジ
+          %button.Button{id: 'maintenance'} 環境整備
+          %button.Button{id: 'visit'} 出張
+          %button.Button{id: 'rest'} 休憩
+          %button.Button{id: 'toilet'} トイレチェック
+          %button.Button{id: 'other'} その他
+      .Schedule__create
+        .DWS-header
+          .DWS-header__block
+            .DWS-header__block--name 名前
+          .DWS-header__block--remark 備考
+          -13.times do |i|
+            .DWS-header__block
+              %P.DWS_header__block--time #{ i + 9 }:00
+        -@staffs.each do|staff|
+          .DWS-contents
+            .DWS-contents__name
+              = form_with do |f|
+                = f.collection_select :hoge, Staff.where(store_id: current_store.id).order(rank_id: "DESC"), :id, :name, {prompt: ""}, class:"select-staff"
+            .DWS-contents__schedule
+              .DWS-contents__input
+                %input.DWS-contents__input--form
+        .Add
+          %button.Add-btn +
+.Schedule__output
+  %button.Print-btn 印刷する

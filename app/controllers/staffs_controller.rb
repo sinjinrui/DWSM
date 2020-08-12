@@ -1,19 +1,41 @@
 class StaffsController < ApplicationController
+  before_action :authenticate_store!, only: [:new]
+  before_action :staff_index, only: [:new, :edit]
+  before_action :set_staff, only: [:edit, :update, :destroy]
 
   def index
   end
 
   def new
-    @staffs = Staff.where(store_id: current_store.id)
     @staff = Staff.new
   end
 
   def create
     @staff = Staff.new(staff_params)
     if @staff.save
+      redirect_to new_staff_path, notice: 'スタッフを登録しました'
+    else
+      redirect_to new_staff_path, alert: '登録できませんでした'
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    @staff.update(staff_params)
+    if @staff.save
+      redirect_to new_staff_path, notice: '情報が更新されました'
+    else
+      redirect_to new_staff_path, alert: '更新に失敗しました'
+    end
+  end
+
+  def destroy
+    if @staff.destroy
       redirect_to new_staff_path
     else
-      render :new
+      redirect_to new_staff_path
     end
   end
 
@@ -21,6 +43,14 @@ class StaffsController < ApplicationController
 
   def staff_params
     params.require(:staff).permit(:name, :rank_id).merge(store_id: current_store.id)
+  end
+
+  def staff_index
+    @staffs = Staff.where(store_id: current_store.id).order(rank_id: "DESC")
+  end
+
+  def set_staff
+    @staff = Staff.find(params[:id])
   end
 
 end

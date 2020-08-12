@@ -55,3 +55,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "haml-rails", "~> 2.0"
 gem 'active_hash'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'font-awesome-sass'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'gon'

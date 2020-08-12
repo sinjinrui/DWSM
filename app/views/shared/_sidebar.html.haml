@@ -1,0 +1,17 @@
+.Staff-management
+  %h1.Staff-management__title スタッフ一覧
+  .Staffs
+    .Staffs-index
+      %p.Staffs-index__title 名前
+      - @staffs.each do |staff|
+        %p.Staffs-index__text= staff.name
+    .Staffs-index
+      %p.Staffs-index__title キャリアパスランク
+      - @staffs.each do |staff|  
+        .Staffs-index__right 
+          %p.Staffs-index__rank= staff.rank.name
+          .Staffs-index__btn
+            = link_to edit_staff_path(staff.id),class:"Staffs-index__btn--edit" do
+              = icon('fas', 'pencil-alt')
+            = link_to staff_path(staff.id), method: :delete, class:"Staffs-index__btn--delete" do
+              = icon('fas', 'times-circle')

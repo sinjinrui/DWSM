@@ -1,8 +1,26 @@
+* {
+  box-sizing: border-box;
+}
 
 .Wrapper {
-  box-sizing: border-box;
   position: fixed;
+  z-index: 30;
+  width: 100vw;
+}
+
+.notice {
+  background-color: rgb(108, 213, 240);
+  color: #fff;
+  text-align: center;
   z-index: 10;
+}
+.alert {
+  background-color: rgb(255, 136, 67);
+  color: #fff;
+  text-align: center;
+}
+
+.Header {
   padding: 0 30px 0 30px;
   background-color: #000000;
   height: 80px;
@@ -17,7 +35,7 @@
   .Header-right {
     font-size: 16px;
     font-weight: bold;
-
+    padding-right: 50px;
   }
 }
 

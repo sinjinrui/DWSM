@@ -1,12 +1,13 @@
 .Staff {
   width: 100vw;
   height: 100vh;
-  padding: 80px 0 0 0;
+  padding: 100px 0 0 0;
   display: flex;
   &-management {
     padding: 20px 30px 0 30px;
-    width: 350px;
+    width: 450px;
     border-right: 2px solid #b6a9a971;
+    overflow: scroll;
     &__title {
       font-size: 24px;
       font-weight: bold;
@@ -15,7 +16,7 @@
     }
   &-regist{
     padding: 20px 0 0 50px;
-    width: calc(100% - 350px);
+    width: calc(100% - 450px);
     &__title {
       font-size: 24px;
       font-weight: bold;
@@ -24,18 +25,18 @@
     &__name {
       padding: 5px;
       resize: none;
-      width: 200px;
-      height: 26px;
+      width: 220px;
+      height: 36px;
       margin-bottom: 15px;
     }
     &__rank {
-      width: 210px;
+      width: 220px;
       height: 36px;
       margin-bottom: 30px;
     }
     &__btn {
       padding: 5px 15px;
-      background-color: rgb(160, 8, 8);
+      background-color: #a00808;
       color: #fff;
       border: none;
       border-radius: 4px;
@@ -47,6 +48,38 @@
   display: flex;
   justify-content: space-between;
   &-index {
+    &__right{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__text {
+      margin: 12px 0 16px 0;
+    }
+    &__rank {
+      margin: 12px 0 0px 0;
+    }
+    &__btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__btn--delete {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+      margin: 2px 0 2px 5px;
+      padding: 0 6px;
+      border-radius: 4px;
+      background-color: #a00808;
+    }
+    &__btn--edit {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+      margin: 2px 0 2px 10px;
+      padding: 0 6px;
+      border-radius: 4px;
+      background-color: rgb(98, 216, 124);
+    }
     &__title {
       font-weight: bold;    }
   }
