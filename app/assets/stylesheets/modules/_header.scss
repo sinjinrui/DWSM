@@ -1,3 +1,7 @@
+body {
+  -webkit-print-color-adjust: exact;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,20 +13,21 @@
 }
 
 .notice {
-  background-color: rgb(108, 213, 240);
+  background-color: #6cd5f0;
   color: #fff;
   text-align: center;
   z-index: 10;
 }
 .alert {
-  background-color: rgb(255, 136, 67);
+  background-color: #ff8843;
   color: #fff;
   text-align: center;
 }
 
 .Header {
   padding: 0 30px 0 30px;
-  background-color: #000000;
+  // background-color: #000;
+  background: linear-gradient(20deg, #bd3b3b, #ffc2c2);
   height: 80px;
   width: 100vw;
   display: flex;
@@ -41,11 +46,13 @@
 
 .store-name {
   text-decoration: none;
-  color: #ffffffd5;
+  color: #fff;
+  text-shadow: 1px 1px #838383;
   font-size: 20px;
 }
 .menu-link {
   text-decoration: none;
-  color: #ffffffd5;
+  color: #fff;
+  text-shadow: 1px 1px #838383;
   margin-left: 5px;
 }

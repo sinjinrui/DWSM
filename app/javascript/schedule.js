@@ -1,8 +1,19 @@
 $(function() {
 
+  $('.Print-btn').on('click', function(){
+    const btnList = $('.Btn-list');
+
+    btnList.hide();
+
+    window.print();
+
+    btnList.show();
+
+  });
+
   $('.Add-btn').on('click',function(){
     var dwsLine = `
-                    <div class="DWS-contents">
+                    <div class="DWS-contents Add-contents">
                     <div class="DWS-contents__name">
                     <input class="Add-name">
                     </div>

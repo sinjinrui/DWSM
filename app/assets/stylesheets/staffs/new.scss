@@ -36,10 +36,16 @@
     }
     &__btn {
       padding: 5px 15px;
-      background-color: #a00808;
+      background-color: #be1313;
+      box-shadow: 0 2px #6e0606;
       color: #fff;
       border: none;
       border-radius: 4px;
+      :active {
+        box-shadow: none;
+        position: relative;
+        top: 10px;
+      }
     }
   }
 }
@@ -61,6 +67,11 @@
     &__btn {
       display: flex;
       justify-content: flex-end;
+      :active {
+        box-shadow: none;
+        position: relative;
+        top: 2px;
+      }
     }
     &__btn--delete {
       text-decoration: none;
@@ -69,7 +80,9 @@
       margin: 2px 0 2px 5px;
       padding: 0 6px;
       border-radius: 4px;
-      background-color: #a00808;
+      background-color: #af1515;
+      box-shadow: 0 2px #550000;
+
     }
     &__btn--edit {
       text-decoration: none;
@@ -78,7 +91,8 @@
       margin: 2px 0 2px 10px;
       padding: 0 6px;
       border-radius: 4px;
-      background-color: rgb(98, 216, 124);
+      background-color: #62d87c;
+      box-shadow: 0 2px #36974b;
     }
     &__title {
       font-weight: bold;    }
