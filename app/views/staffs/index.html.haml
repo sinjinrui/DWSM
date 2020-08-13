@@ -7,6 +7,12 @@
       %li ・感覚的操作によるDWSの作成
       %li ・スタッフの登録・編集・削除
       %li ・資源の削減
-      %p ※80店舗が毎日1枚印刷すると
-      %p →  29200枚(約 木2本分に相当)
+      %p.Top-text ※80店舗が毎日1枚印刷すると
+      %p.Top-text →  年間29200枚(約 木2本分に相当)
+    .Tree-wrapper
+      =image_tag 'baby_tree', class: 'Baby-tree'
+    .Contact-link
+      %p お問合わせは
+      =link_to "こちら","https://docs.google.com/forms/d/e/1FAIpQLSdK53UtU6HU5xIfDwtJ7YC8ewMGkbAtygXTLOQ612XQxvKGvw/viewform?usp=sf_link", class:"G-form", target: :_blank, rel: "noopener noreferrer"
+    
   %p.copy ©️ 2020 Kawaguchi,inc.

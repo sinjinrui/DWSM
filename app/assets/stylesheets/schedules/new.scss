@@ -8,7 +8,7 @@
       display: flex;
       justify-content: space-between;
       &--text {
-        margin-top: 23px;
+        margin-top: 35px;
         height: 40px;
         display: flex;
         align-items: center;
@@ -41,7 +41,6 @@
   display: flex;
   .Schedule-btn {
     width: 200px;
-    // height: 300px;
   }
   .Schedule__create {
     width: 1200px;
@@ -66,6 +65,7 @@
 }
 
 .Creater {
+  margin-top: 5px;
   display: flex;
   border: 1px solid #363434;
   border-radius: 2px;
@@ -78,6 +78,8 @@
     border-right: 1px solid #363434;
   }
   &__name {
+
+    width: 120px;
     text-align: center;
     border: none;
   }

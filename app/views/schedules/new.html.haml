@@ -2,10 +2,11 @@
   .Schedule
     .Schedule__theme
       .Schedule__theme--date
-        %P.Date= @time.strftime("%Y/%m/%d(#{@wd[@time.wday]})")
-        .Creater
-          %p.Creater__text 作成者
-          %input.Creater__name
+        =form_with do |f|
+          =f.date_field :hoge
+          .Creater
+            %p.Creater__text 作成者
+            = f.collection_select :hoge, Staff.where(store_id: current_store.id).order(rank_id: "DESC"), :id, :name, {prompt: ""}, class:"Creater__name"
       .Schedule__theme--text
         %p.Action-text アクションテーマ
         %input.Action-input

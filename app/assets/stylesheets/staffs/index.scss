@@ -1,4 +1,5 @@
 .Top {
+  position: relative;
   border-radius: 10px;
   height: 450px;
   width: 400px;
@@ -14,8 +15,30 @@
     color: #a8e49e;
     text-shadow: 1px 2px rgb(0, 156, 0);
   }
-  p {
+   .Top-text {
     margin-left: 20px;
     color: rgb(165, 165, 165);
+  }
+}
+.Tree-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.Baby-tree {
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+}
+
+.Contact-link {
+  display: flex;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  font-weight: bold;
+  .G-form {
+    text-decoration: none;
+    color: #a393ff;
+    text-shadow: 1px 1px rgb(10, 0, 156);
   }
 }
