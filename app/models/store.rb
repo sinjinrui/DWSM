@@ -4,12 +4,12 @@ class Store < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  password_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,100}\z/i
+  password_regex = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,100}\z/i.freeze
 
   with_options presence: true do
     validates :name
     validates :email
-    validates :password, format: { with: password_REGEX }
+    validates :password, format: { with: password_regex }
   end
 
   has_many :staffs
