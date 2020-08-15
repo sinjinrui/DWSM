@@ -10,6 +10,7 @@ require("channels")
 require("jquery")
 require("jquery-ui-dist/jquery-ui")
 require('../schedule')
+require('../root')
 
 
 

@@ -2,15 +2,13 @@
 
 .container
   .Top
-    %h1 このサイトで出来るコト
-    %ul
-      %li ・感覚的操作によるDWSの作成
-      %li ・スタッフの登録・編集・削除
-      %li ・資源の削減
+    %h1.Explanation D . W . S . M
+    %ul.Function-list
+      %li.Function-list__one ・感覚操作で１日のスケジュールを作成
+      %li.Function-list__two ・スタッフの登録・編集・削除
+      %li.Function-list__three ・ペーパーレスで資源の削減
       %p.Top-text ※80店舗が毎日1枚印刷すると
       %p.Top-text →  年間29200枚(約 木2本分に相当)
-    .Tree-wrapper
-      =image_tag 'baby_tree', class: 'Baby-tree'
     .Contact-link
       %p お問合わせは
       =link_to "こちら","https://docs.google.com/forms/d/e/1FAIpQLSdK53UtU6HU5xIfDwtJ7YC8ewMGkbAtygXTLOQ612XQxvKGvw/viewform?usp=sf_link", class:"G-form", target: :_blank, rel: "noopener noreferrer"
