@@ -3,7 +3,7 @@
   .alert= flash[:alert]
   .Header
     .Header-left
-      = link_to "Daily Work Schedule Maker", root_path, class: "menu-link"
+      = link_to "Daily Work Schedule Maker", root_path, data: {"turbolinks" => false}, class: "menu-link"
     .Header-right
       -if store_signed_in?
         = link_to current_store.name, "#", class: "store-name"

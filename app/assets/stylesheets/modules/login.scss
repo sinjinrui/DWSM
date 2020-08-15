@@ -1,71 +1,59 @@
-.container {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("tree2.jpg");
-  background-size: cover;
-  background-color:rgba(255,255,255,0.6);
-  background-blend-mode:lighten;
+.Login {
+  border-radius: 10px;
+  height: 450px;
+  width: 400px;
+  background-color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding-top: 30px;
-  .Login {
-    border-radius: 10px;
-    height: 450px;
-    width: 400px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    &-form {
-      text-align: center;
-      &__text {
-        font-size: 26px;
-      }
-      &__field {
-        margin-top: 20px;
-        &--email {
-          width: 300px;
-          padding: 5px;
-        }
-        &--password {
-          width: 300px;
-          padding: 5px;
-          margin-bottom: 15px;
-        }
-        .Login-btn {
-          padding: 10px 40px;
-          font-weight: bold;
-          border-radius: 4px;
-          color: white;
-          border: none;
-          background-color: rgb(98, 216, 124);
-        }
-      }
+  justify-content: space-around;
+  &-form {
+    text-align: center;
+    &__text {
+      font-size: 26px;
     }
-    .Sign-up {
-      margin-bottom: 30px;
-      text-align: center;
-      &__text {
-        margin-bottom: 20px;
+    &__field {
+      margin-top: 20px;
+      &--email {
+        width: 300px;
+        padding: 5px;
       }
-      &__btn {
-        text-decoration: none;
-        background-color: rgb(180, 16, 16);
-        color: white;
+      &--password {
+        width: 300px;
+        padding: 5px;
+        margin-bottom: 15px;
+      }
+      .Login-btn {
+        padding: 10px 40px;
         font-weight: bold;
-        padding: 15px 40px;
         border-radius: 4px;
-        
+        color: white;
+        border: none;
+        background-color: rgb(98, 216, 124);
       }
     }
   }
-  .copy {
-    color: #8b8b8b;
-    font-size: 6px;
-    bottom: 2px;
-    position: absolute;
+  .Sign-up {
+    margin-bottom: 30px;
+    text-align: center;
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__btn {
+      text-decoration: none;
+      background-color: rgb(180, 16, 16);
+      color: white;
+      font-weight: bold;
+      padding: 15px 40px;
+      border-radius: 4px;
+      
+    }
   }
 }
+.copy {
+  color: #8b8b8b;
+  font-size: 6px;
+  bottom: 2px;
+  position: absolute;
+}
+
 
