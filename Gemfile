@@ -68,3 +68,4 @@ gem 'gon'
 group :production do
   gem 'unicorn', '5.4.1'
 end
+gem 'ast', '~> 2.4', '>= 2.4.1'
