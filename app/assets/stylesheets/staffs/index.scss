@@ -42,10 +42,12 @@
 }
 
 .Contact-link {
+  width: 100%;
   font-weight: bold;
   display: flex;
+  justify-content: flex-end;
+  padding: 15px;
   font-size: 22px;
-  margin: 150px 0 0 1200px;
   color: #8b0101;
   .G-form {
     text-decoration: none;
