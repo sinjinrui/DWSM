@@ -33,9 +33,9 @@ class StaffsController < ApplicationController
 
   def destroy
     if @staff.destroy
-      redirect_to new_staff_path
+      redirect_to new_staff_path, notice: '情報を削除しました'
     else
-      redirect_to new_staff_path
+      redirect_to new_staff_path alert: '削除に失敗しました'
     end
   end
 
