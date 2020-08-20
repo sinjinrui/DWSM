@@ -13,9 +13,11 @@ class StaffsController < ApplicationController
   def create
     @staff = Staff.new(staff_params)
     if @staff.save
-      redirect_to new_staff_path, notice: 'スタッフを登録しました'
+      respond_to do |format|
+        format.json
+      end
     else
-      redirect_to new_staff_path, alert: '登録できませんでした'
+      redirect_to new_staff_path
     end
   end
 
