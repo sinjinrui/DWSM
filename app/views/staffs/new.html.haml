@@ -3,7 +3,7 @@
   
   .Staff-regist
     %h1.Staff-regist__title スタッフ登録
-    = form_with model: @staff, local: true do |f|
+    = form_with model: @staff, local: true, class:"Staff-regist__form" do |f|
       %p.Staff-regist__text スタッフの名前 (必須)
       = f.text_area :name, class:"Staff-regist__name", placeholder:"DWSに表示される名称です", maxlength:"10"
       %p.Staff-regist__text スタッフのキャリアパスランク (必須)

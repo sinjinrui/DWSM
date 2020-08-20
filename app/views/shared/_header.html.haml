@@ -8,7 +8,7 @@
       -if store_signed_in?
         = link_to current_store.name, "#", data: {turbolinks: false}, class: "store-name"
       = link_to "DWS作成", new_schedule_path, data: {turbolinks: false}, class: "menu-link"
-      = link_to "スタッフ登録", new_staff_path, class: "menu-link"
+      = link_to "スタッフ登録", new_staff_path, data: {turbolinks: false}, class: "menu-link"
       -if store_signed_in?
         = link_to "ログアウト", destroy_store_session_path, data: {turbolinks: false}, method: :delete, class: "menu-link"
       -else
