@@ -16,7 +16,7 @@ $(function() {
     let rankHtml = `<div class="Staffs-index__right">
                       <p class="Staffs-index__rank">${staff.rank_name}</p>
                       <div class="Staffs-index__btn">
-                        <a class="Staffs-index__btn--edit" href="/staffs/${staff.id}/edit"><i class="fas fa-pencil-alt"></i>
+                        <a data-turbolinks="false" class="Staffs-index__btn--edit" href="/staffs/${staff.id}/edit"><i class="fas fa-pencil-alt"></i>
                         </a>
                         <a class="Staffs-index__btn--delete" rel="nofollow" data-method="delete" href="/staffs/${staff.id}"><i class="fas fa-times-circle"></i>
                         </a>

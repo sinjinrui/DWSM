@@ -1,5 +1,5 @@
 .Staff
-  = render 'shared/sidebar'
+  = render partial: "shared/sidebar", locals: { staffs: @staffs }
 
   .Staff-regist
     %h1.Staff-regist__title スタッフ情報編集

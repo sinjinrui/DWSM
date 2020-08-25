@@ -1,4 +1,5 @@
 class StaffsController < ApplicationController
+  include CurrentStaff
   before_action :authenticate_store!, only: [:new]
   before_action :staff_index, only: [:new, :edit]
   before_action :set_staff, only: [:edit, :update, :destroy]
@@ -48,11 +49,11 @@ class StaffsController < ApplicationController
   end
 
   def staff_index
-    @staffs = Staff.where(store_id: current_store.id).order(rank_id: "DESC")
+    @staffs = Staff.includes(:store).where(store_id: current_store.id).order(rank_id: "DESC")
   end
 
-  def set_staff
-    @staff = Staff.find(params[:id])
-  end
+  # def set_staff
+  #   @staff = Staff.find(params[:id])
+  # end
 
 end

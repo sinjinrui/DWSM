@@ -3,11 +3,11 @@
   .Staffs
     .Staffs-index.Add-staff__name
       %p.Staffs-index__title 名前
-      - @staffs.each do |staff|
+      - staffs.each do |staff|
         %p.Staffs-index__text= staff.name
     .Staffs-index.Add-staff__rank
       %p.Staffs-index__title キャリアパスランク
-      - @staffs.each do |staff|  
+      - staffs.each do |staff|  
         .Staffs-index__right 
           %p.Staffs-index__rank= staff.rank.name
           .Staffs-index__btn
