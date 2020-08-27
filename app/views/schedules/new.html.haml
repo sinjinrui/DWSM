@@ -25,21 +25,28 @@
         %p.Target-text 円
     .Create-wrapper
       .Btn-list
+        .DWS-parts__text
+          %p 下のボタンをクリック
+
         .DWS-parts
-          .DWS-parts__text
-            %p ドラッグでDWSへ移動
-            %p ダブルクリックで削除
-            %p 右端から伸縮可能
         .Schedule-btn
           %button.Button{id: 'product'} 生産
           %button.Button{id: 'buy'} 買取
           %button.Button{id: 'register'} レジ
-          %button.Button{id: 'maintenance'} 環境整備
+          %button.Button{id: 'maintenance'} メンテ
           %button.Button{id: 'visit'} 出張
           %button.Button{id: 'rest'} 休憩
           %button.Button{id: 'toilet'} トイレチェック
           %button.Button{id: 'other'} その他
+          - @tasks.each do |task|
+            = button_to task.name, {}, {class: "Origin-btn", name: "#{task.color}"}
+            = link_to task_path(task.id), method: :delete, class:"Task-delete__btn", name:"#{task.color}" do
+              = icon('fas', 'times-circle', class: "delete-icon")
+          
+        .Print
+          %button.Modal-open.Create-task タスクを作る
           %button.Print-btn PDF保存
+ 
       .Schedule__create
         .DWS-header
           .DWS-header__block
@@ -53,8 +60,27 @@
             .DWS-contents__name
               = form_with do |f|
                 = f.collection_select :hoge, Staff.where(store_id: current_store.id).order(rank_id: "DESC"), :id, :name, {prompt: ""}, class:"select-staff"
-            .DWS-contents__schedule
+            .DWS-contents__memo
               .DWS-contents__input
                 %input.DWS-contents__input--form
+            .DWS-contents__schedule
+              -12.times do |i|
+                .Hour
+                  -4.times do |i|
+                    .Quarter
         .Add
           %button.Add-btn +
+
+.Modal-window
+  .Modal-bg.Modal-close
+  .Modal-content
+    = form_with model: @task, local: true, class: "Origin-task__form" do |f|
+      %h2.Modal-content__text 新しいタスクを生成します
+      .Modal-content__name
+        %p タスクの名前
+        = f.text_field :name, {placeholder: "例：品出し"}
+      .Modal-content__color
+        %p タスクの色
+        = f.color_field :color, {class: "Modal-content__color--btn"}
+      .Modal-content__btn
+        = f.submit "追加する", {class: "Modal-content__btn--submit"}

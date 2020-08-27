@@ -13,4 +13,5 @@ class Store < ApplicationRecord
   end
 
   has_many :staffs
+  has_many :tasks
 end

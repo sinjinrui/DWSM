@@ -3,9 +3,8 @@ class SchedulesController < ApplicationController
 
   def new
     @staffs = Staff.where(store_id: current_store.id)
-    gon.staffs = @staffs
-    @wd = ["日", "月", "火", "水", "木", "金", "土"]
-    @time = Time.now
+    @task = Task.new
+    @tasks = Task.where(store_id: current_store.id)
   end
 
 end
