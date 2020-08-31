@@ -6,8 +6,13 @@ DWSMは、実店舗営業における、チームスケジュール作成アプ�
 # URL
 http://176.32.95.183/
 
+# ACCOUNT
+テスト用アカウント  
+・メールアドレス:test@test  
+・パスワード:test123  
+
 # DEMO
-[![Image from Gyazo](https://i.gyazo.com/f2d35d25aa6971f7ef7e9f3849ed9db2.gif)](https://gyazo.com/f2d35d25aa6971f7ef7e9f3849ed9db2)
+[![Image from Gyazo](https://i.gyazo.com/85dbdf6b23aee9bf07f75c1d08af9033.gif)](https://gyazo.com/85dbdf6b23aee9bf07f75c1d08af9033)
 
 # 機能一覧
 ・店舗登録・ログイン・ログアウト機能  
@@ -37,11 +42,6 @@ http://176.32.95.183/
 3:ヘッダーメニュー「DWS作成」からスケジュール作成。  
 4:画面左側のタスクボタンを押下。出現したタスクをスケジュール欄にドラッグ。タスクは伸縮が可能で、直感的且つフレキシブルなスケジュール生成が可能。  
 5:「タスクを作る」ボタンからタスクの生成が可能。
-
-# ACCOUNT
-テスト用アカウント  
-・メールアドレス:test@test  
-・パスワード:test123  
 
 # ローカル動作方法
 
