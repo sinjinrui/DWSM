@@ -40,6 +40,17 @@ body {
     font-size: 16px;
     font-weight: bold;
     padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    .store-name {
+      margin-right: 40px;
+    }
+    ul {
+      width: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -53,5 +64,105 @@ body {
   text-decoration: none;
   color: #fff;
   text-shadow: 1px 1px #838383;
-  margin-left: 5px;
+  margin-left: 15px;
+}
+
+.nav-close {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  .top-link {
+    font-size: 12px;
+    width: 150px;
+  }
+
+  .store-name {
+    font-size: 12px;
+    width: 100px;
+    margin-left: 30px;
+  }
+
+  #navi {
+    transition: all .6s;
+    overflow-y: auto;
+    padding-top: 40px;
+    width: 200px;
+    height: 100vh;
+    z-index: 200;
+    top: 0;
+    right: -320px;
+    background-color: #5e0000;
+    opacity: 0.7;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 100px;
+    padding-left: 20px;
+    .menu-link {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+  }
+
+  .nav-btn {
+    width: 44px;
+    height: 44px;
+    z-index: 100;
+    top: 18px;
+    right: 15px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .Header {
+    position: relative;
+  }
+
+  .line {
+    transition: all .6s;
+    width: 34px;
+    height: 4px;
+    border-radius: 3px;
+    left: 5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+  }
+
+  .line1 { top: 10px; }
+  .line2 { top: 21px; }
+  .line3 { top: 32px; }
+
+  .nav-close {
+    visibility: visible;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+  }
+
+  .nav-bg {
+    opacity: 0;
+    transition: all .6s;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    background-color: #505050;
+    cursor: pointer;
+    position: fixed;
+  }
+
+  .nav_open #navi { right: 0; }
+
+  .nav_open .nav-bg {
+    opacity: .8;
+    visibility: visible;
+  }
 }
