@@ -3,13 +3,24 @@
   .alert= flash[:alert]
   .Header
     .Header-left
-      = link_to "Daily Work Schedule Maker", root_path, data: {"turbolinks" => false}, class: "menu-link"
+      = link_to "Daily Work Schedule Maker", root_path, data: {"turbolinks" => false}, class: "menu-link top-link"
     .Header-right
       -if store_signed_in?
         = link_to current_store.name, "#", data: {turbolinks: false}, class: "store-name"
-      = link_to "DWS作成", new_schedule_path, data: {turbolinks: false}, class: "menu-link"
-      = link_to "スタッフ登録", new_staff_path, data: {turbolinks: false}, class: "menu-link"
-      -if store_signed_in?
-        = link_to "ログアウト", destroy_store_session_path, data: {turbolinks: false}, method: :delete, class: "menu-link"
-      -else
-        = link_to "ログイン", new_store_session_path, class: "menu-link"
+      %ul#navi
+        %i.fas.fa-times.nav-close
+        %li
+          = link_to "DWS作成", new_schedule_path, data: {turbolinks: false}, class: "menu-link"
+        %li
+          = link_to "スタッフ登録", new_staff_path, data: {turbolinks: false}, class: "menu-link"
+        -if store_signed_in?
+          %li
+            = link_to "ログアウト", destroy_store_session_path, data: {turbolinks: false}, method: :delete, class: "menu-link"
+        -else
+          %li
+            = link_to "ログイン", new_store_session_path, class: "menu-link"
+    .nav-btn.nav-switch#nav-btn
+      %span.line.line1
+      %span.line.line2
+      %span.line.line3
+    .nav-bg#nav-bg

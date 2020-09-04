@@ -1,56 +1,254 @@
-.Top {
-  height: 100%;
-  width: 100%;
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
-.Explanation {
-  opacity: 0;
-  font-size: 50px;
-  margin-left: 50px;
-  color: white;
-  font-style: oblique;
-  font-weight: bold;
-  text-shadow: 4px 4px #929292;
-}
-
-.Function-list {
-  margin: 30px 0 0 350px;
-  color: #ffffff;
-  font-size: 30px;
-  font-style: oblique;
-  font-weight: bold;
-  text-shadow: 2px 2px #929292;
-  &__one {
-    margin-left: 20px;
-    opacity: 0;
-  }
-  &__two {
-    margin-left: 10px;
-    opacity: 0;
-  }
-  &__three {
-    opacity: 0;
-  }
-  .Top-text {
-    font-size: 15px;
-    margin-top: 20px;
-    margin-left: 350px;
-    color: #888888;
-    text-shadow: 1px 1px #020202;
-    opacity: 0;
-  }
-}
-
-.Contact-link {
-  width: 100%;
-  font-weight: bold;
+.Return-btn {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  background-color: hsl(0, 0%, 53%);
+  color: #fff;
   display: flex;
-  justify-content: flex-end;
-  padding: 15px;
-  font-size: 22px;
-  color: #8b0101;
-  .G-form {
-    text-decoration: none;
-    color: #ff6565;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 15px;
+  .fa-arrow-up {
+    font-size: 40px;
   }
+}
+
+.Title-wrapper {
+  width: 1200px;
+  margin-top: -60px;
+  .Title {
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px #c9c9c9;
+  }
+  .Title-text {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.jump-wrapper {
+  margin-top: 30px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  .jump-btn {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    background-color: #ff8e8e;
+    border-radius: 4px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.About {
+  height: 700px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    &__title {
+      font-size: 60px;
+      font-weight: bold;
+    }
+    &__text {
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+  &-contents {
+    margin-top: 30px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    .About-content {
+      width: 300px;
+      &__title {
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 2px solid #acacac;
+      }
+      &__text {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.How-to {
+  padding-top: 100px;
+  background-color: #e0e0e0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__header {
+    margin-bottom: 50px;
+    &--title {
+      font-size: 60px;
+      font-weight: bold;
+    }
+    &--text {
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  &__contents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 900px;
+    .How-to__content {
+      margin-bottom: 40px;
+      &--text {
+        width: 400px;
+        font-weight: bold;
+        height: 50px;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 50px;
+    &--btn {
+      border-radius: 4px;
+      display: inline-block;
+      color: #fff;
+      background-color: #ff8e8e;
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.sample {
+  width: 400px;
+  height: 250px;
+}
+
+.Footer {
+  height: 50px;
+  background-color: #af0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-text {
+    color: #fff;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .Return-btn {
+    visibility: hidden;
+  }
+
+  .Title-wrapper {
+    width: 480px;
+    text-align: center;
+    .Title {
+      font-size: 45px;
+    }
+    .Title-text {
+      font-size: 15px;
+    }
+  }
+
+  .jump-wrapper {
+    width: 480px;
+    align-items: center;
+    .jump-btn {
+      font-size: 20px;
+      padding: 10px;
+      width: 400px;
+    }
+  }
+
+  .About {
+    width: 480px;
+    height: 900px;
+    &-header {
+      &__title {
+        font-size: 45px;
+      }
+      &__text {
+        font-size: 20px;
+      }
+    }
+    &-contents {
+      width: 480px;
+      flex-direction: column;
+      align-items: center;
+      .About-content {
+        margin-bottom: 50px;
+        &__title {
+          font-size: 20px;
+        }
+        &__text {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .How-to {
+    width: 480px;
+    &__header {
+      &--title {
+        font-size: 45px;
+      }
+      &--text {
+        font-size: 20px;
+      }
+    }
+    &__contents {
+      width: 480px;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__link {
+      justify-content: center;
+      &--btn {
+        font-size: 20px;
+        width: 400px;
+        padding: 10px;
+      }
+    }
+  }
+
 }

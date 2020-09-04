@@ -1,21 +1,33 @@
+$(window).on('load resize',function(){
+  adOffset = $('.About-contents').offset().top;
+  winH = $(window).height();
+});
 $(function() {
-  $('.Explanation').animate({
-    opacity: 1
-  }, 1000);
 
-  $('.Function-list__one').animate({
-    opacity: 1
-  }, 2000);
+  var topBtn = $('#jump-top');
+  topBtn.hide();
+  $(window).scroll(function(){
+    if($(this).scrollTop() > adOffset - winH ) {
+      topBtn.fadeIn();
+    } else {
+      topBtn.fadeOut();
+    }
+  });
 
-  $('.Function-list__two').animate({
-    opacity: 1
-  }, 3000);
+  $('#jump-about').on('click',function(){
+    var about = $('.About-header__title').offset().top-150;
+    $('body,html').animate({scrollTop:about});
+    return false;
+  });
 
-  $('.Function-list__three').animate({
-    opacity: 1
-  }, 4000);
+  $('#jump-howto').on('click',function(){
+    var about = $('.How-to__header--title').offset().top-150;
+    $('body,html').animate({scrollTop:about});
+    return false;
+  });
 
-  $('.Top-text').animate({
-    opacity: 1
-  }, 5000);
+  $('#jump-top').on('click',function(){
+    $('body,html').animate({scrollTop:0},100);
+    return false;
+  });
 });

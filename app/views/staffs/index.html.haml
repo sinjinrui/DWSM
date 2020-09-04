@@ -1,16 +1,50 @@
+
 = render 'shared/header'
 
+.Return-btn{id:"jump-top"}
+  %i.fas.fa-arrow-up
 .container
-  .Top
-    %h1.Explanation D . W . S . M
-    %ul.Function-list
-      %li.Function-list__one ・感覚操作で１日のスケジュールを作成
-      %li.Function-list__two ・スタッフの登録・編集・削除
-      %li.Function-list__three ・ペーパーレスで資源の削減
-      %p.Top-text ※80店舗が毎日1枚印刷すると
-      %p.Top-text →  年間29200枚(約 木2本分に相当)
-  .Contact-link
-    %p お問合わせは
-    =link_to "こちら","https://docs.google.com/forms/d/e/1FAIpQLSdK53UtU6HU5xIfDwtJ7YC8ewMGkbAtygXTLOQ612XQxvKGvw/viewform?usp=sf_link", class:"G-form", target: :_blank, rel: "noopener noreferrer"
-    
-  %p.copy ©️ 2020 Kawaguchi,inc.
+  .Title-wrapper
+    %h1.Title D W S M
+    %p.Title-text 簡単操作でチームスケジューリングをしよう
+  .jump-wrapper
+    =link_to "DWSMとは？", "#1", id:"jump-about", class:"jump-btn"
+    =link_to "使い方を見る", "#2", id:"jump-howto", class:"jump-btn"
+    =link_to "お問い合わせ","https://docs.google.com/forms/d/e/1FAIpQLSdK53UtU6HU5xIfDwtJ7YC8ewMGkbAtygXTLOQ612XQxvKGvw/viewform?usp=sf_link", id:"jump-contact", class:"jump-btn", target: :_blank, rel: "noopener noreferrer"
+.About
+  .About-header
+    %h2.About-header__title About
+    %p.About-header__text DWSMについて
+  .About-contents
+    .About-content
+      %h3.About-content__title 1.資源の削減
+      %p.About-content__text 植林木一本からA4コピー用紙が、約13,000枚作られます。スケジュールを毎日紙で作成すると、35店舗で一年間に一本の木を使う計算になります。ペーパーレス化を進めていきましょう。
+    .About-content
+      %h3.About-content__title 2.簡単操作でDWS作成
+      %p.About-content__text 直感で操作しやすく、変更のしやすいアプリケーションを提供します。もし使いにくいところがあれば、いつでもご意見お待ちしておりますので、改善にご協力をお願いいたします。
+    .About-content
+      %h3.About-content__title 3.店舗スタッフ登録
+      %p.About-content__text スタッフをキャリアパスランク毎にマネジメント出来ます。スタッフの向上心を大切にして、切磋琢磨の環境を作っていきましょう。
+.How-to
+  .How-to__header
+    %h2.How-to__header--title How to Use
+    %p.How-to__header--text スケジュール作成方法
+  .How-to__contents
+    .How-to__content
+      %p.How-to__content--text 1:日付、作成者、当日の人員を選びましょう。
+      =image_tag "sample4.gif", alt: "sample-image", id: "pic1", class: "sample"
+    .How-to__content
+      %p.How-to__content--text 2:ボタンを押してタスクを生成。スケジュール蘭に運びます。
+      =image_tag "sample1.gif", alt: "sample-image", id: "pic2", class: "sample"
+    .How-to__content
+      %p.How-to__content--text 3:タスクの長さは変更可能です。また、ダブルクリックで削除できます。
+      =image_tag "sample2.gif", alt: "sample-image", id: "pic3", class: "sample"
+    .How-to__content
+      %p.How-to__content--text 4:オリジナルのタスクを作成できます。名前と色を選んで下さい。
+      =image_tag "sample3.gif", alt: "sample-image", id: "pic4", class: "sample"
+
+    .How-to__link
+      =link_to "さっそく使ってみる", new_schedule_path, data: {turbolinks: false}, class: "How-to__link--btn"
+.Footer
+  %h3.Footer-text © 2020 Kawaguchi
+.Contact
