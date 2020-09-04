@@ -179,7 +179,7 @@ a {
   }
 
   .Title-wrapper {
-    width: 480px;
+    width: 100vw;
     text-align: center;
     .Title {
       font-size: 45px;
@@ -190,17 +190,17 @@ a {
   }
 
   .jump-wrapper {
-    width: 480px;
+    width: 100vw;
     align-items: center;
     .jump-btn {
       font-size: 20px;
       padding: 10px;
-      width: 400px;
+      width: 350px;
     }
   }
 
   .About {
-    width: 480px;
+    width: 100vw;
     height: 900px;
     &-header {
       &__title {
@@ -211,7 +211,7 @@ a {
       }
     }
     &-contents {
-      width: 480px;
+      width: 100vw;
       flex-direction: column;
       align-items: center;
       .About-content {
@@ -227,7 +227,7 @@ a {
   }
 
   .How-to {
-    width: 480px;
+    width: 100vw;
     &__header {
       &--title {
         font-size: 45px;
@@ -237,18 +237,27 @@ a {
       }
     }
     &__contents {
-      width: 480px;
+      width: 100vw;
       flex-direction: column;
       align-items: center;
+      .How-to__content {
+        &--text {
+          width: 350px;
+        }
+      }
     }
     &__link {
       justify-content: center;
       &--btn {
         font-size: 20px;
-        width: 400px;
+        width: 350px;
         padding: 10px;
       }
     }
   }
 
+  .sample {
+    width: 350px;
+    height: 220px;
+  }
 }
